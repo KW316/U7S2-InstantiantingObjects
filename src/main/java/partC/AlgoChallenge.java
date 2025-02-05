@@ -16,9 +16,22 @@ public class AlgoChallenge {
 
     public static Boolean range3050(int one, int two) {
 
-        return null;
+            if( one > 29 && two > 29 && one < 41 && two < 41){
+                return true;
+            }else if(one > 39 && two > 39 && one < 51 && two < 51){
+                return true;
+            }
+        return false;
     }
 
+    public static void main(String[] args) {
+        System.out.println(range3050(30, 31));
+        System.out.println( range3050(30, 41));
+        System.out.println(range3050(40, 50));
+        System.out.println(compareLastDigit(7, 17));
+        System.out.println(compareLastDigit(6, 17));
+        System.out.println(compareLastDigit(3, 113));
+    }
      /* Problem 21
        We're on the lookout for values that contain the same last digit.
        You will be given two non-negative numbers to compare.
@@ -31,8 +44,13 @@ public class AlgoChallenge {
      */
 
     public static Boolean compareLastDigit(int value1, int value2) {
+           String str = String.valueOf(value1);
+           String str2 = String.valueOf(value2);
+            if(str.substring(str.length()-1).equals(str2.substring(str2.length()-1))){
+                return true;
+            }
 
-        return null;
+        return false;
     }
 
 
